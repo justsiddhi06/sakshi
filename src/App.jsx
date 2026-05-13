@@ -43,7 +43,7 @@ function App() {
     <>
       <audio 
         ref={audioRef} 
-        src="https://upload.wikimedia.org/wikipedia/commons/transcoded/e/ec/Happy_Birthday_to_You.ogg/Happy_Birthday_to_You.ogg.mp3" 
+        src={`${import.meta.env.BASE_URL}assets/hbd.mp3`}
         loop
       />
       
