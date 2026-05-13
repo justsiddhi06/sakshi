@@ -1,11 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const baseUrl = import.meta.env.BASE_URL;
 const images = [
-  { src: '/assets/media__1778652276600.jpg', rotate: 0 },
-  { src: '/assets/media__1778652293196.jpg', rotate: 0 },
-  { src: '/assets/Snapchat-1863478550.jpg', rotate: -90, scale: 1.7, shiftX: 20 },
-  { src: '/assets/Snapchat-792192220.jpg', rotate: -90, scale: 1.8, shiftX: 30 }
+  { src: `${baseUrl}assets/media__1778652276600.jpg`, rotate: 0 },
+  { src: `${baseUrl}assets/media__1778652293196.jpg`, rotate: 0 },
+  { src: `${baseUrl}assets/Snapchat-1863478550.jpg`, rotate: -90, scale: 1.7, shiftX: 20 },
+  { src: `${baseUrl}assets/Snapchat-792192220.jpg`, rotate: -90, scale: 1.8, shiftX: 30 }
 ];
 
 const FloatingGallery = () => {

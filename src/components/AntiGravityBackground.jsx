@@ -29,7 +29,7 @@ const AntiGravityBackground = () => {
       {/* Background Image Layer */}
       <div style={{
         position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
-        background: 'url("/assets/nature_bg.png") center/cover no-repeat',
+        background: `url("${import.meta.env.BASE_URL}assets/nature_bg.png") center/cover no-repeat`,
         opacity: 0.4, zIndex: -2, filter: 'blur(3px)', willChange: 'opacity'
       }}></div>
 

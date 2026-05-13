@@ -1,20 +1,18 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const UniverseSection = () => {
   return (
     <section>
       <h2 className="section-title">You Mean The Universe To Me</h2>
       <div className="orbit-container">
-        <div className="center-heart" style={{ 
-          width: '120px', height: '120px', 
-          borderRadius: '50%', overflow: 'hidden', 
-          animation: 'heartbeat 1.5s infinite', 
-          boxShadow: '0 0 30px var(--primary-glow)', 
-          zIndex: 5,
-          display: 'flex', justifyContent: 'center', alignItems: 'center'
-        }}>
-          <img src="/assets/Snapchat-1360584719.jpg" alt="Center" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'rotate(-90deg) scale(1.5)' }} />
-        </div>
+        <motion.div 
+          style={{ width: '150px', height: '150px', borderRadius: '50%', overflow: 'hidden', boxShadow: '0 0 50px var(--primary-glow)', position: 'relative', zIndex: 10, background: '#000' }}
+          animate={{ scale: [1, 1.1, 1] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <img src={`${import.meta.env.BASE_URL}assets/Snapchat-1360584719.jpg`} alt="Center" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'rotate(-90deg) scale(1.5)' }} />
+        </motion.div>
         <div className="orbit" style={{ width: '200px', height: '200px', animationDuration: '10s' }}>
           <div className="orbit-card" style={{ animation: 'counter-spin 10s linear infinite' }}>Joy</div>
         </div>
